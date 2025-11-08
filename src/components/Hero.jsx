@@ -5,11 +5,15 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-[92vh] pt-24">
-      {/* 3D main object */}
+      {/* 3D cover background */}
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/VJLoxp84lCdVfdZu/scene.splinecode" style={{ width: '100%', height: '100%' }} />
-        {/* Vignette and depth without blocking interaction */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/60" />
+        <Spline scene="https://prod.spline.design/Gt5HUob8aGDxOUep/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        {/* Non-blocking vignette + soft color grade for depth */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/70" />
+        <div className="pointer-events-none absolute inset-0" style={{
+          background:
+            'radial-gradient(40% 30% at 50% 20%, rgba(16,185,129,0.10) 0%, rgba(0,0,0,0) 60%)',
+        }} />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
